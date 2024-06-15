@@ -2,7 +2,6 @@
     "name": "scottboms/kirbytag-kbd",
     "description": "Kirbytag kbd Plugin",
     "type": "kirby-plugin",
-    "version": "1.0.0",
     "homepage": "https://github.com/scottboms/kirbytag-kbd",
     "license": "MIT",
     "authors": [

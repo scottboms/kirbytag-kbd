@@ -1,8 +1,8 @@
 {
   "name": "kbd",
   "description": "Custom Kirbytag to generate <kdb> elements in textareas",
-  "author": "Scott Boms <scottboms@gmail.com>",
-  "version": "1.0.0",
+  "author": "Scott Boms <plugins@scottboms.com>",
+  "version": "1.0.1",
   "type": "kirby-plugin",
   "license": "MIT"
 }
