@@ -10,12 +10,20 @@
  * @license MIT
 **/
 
+use Composer\Semver\Semver;
+use Kirby\Cms\App as Kirby;
+
+// validate Kirby version
+if (Semver::satisfies(Kirby::version() ?? '0.0.0', '~4.0 || ~5.0') === false) {
+	throw new Exception('HTML5 Video Tag requires Kirby 4 or 5');
+}
+
 Kirby::plugin(
   name: 'scottboms/kirbytag-kbd', 
   info: [
     'homepage' => 'https://github.com/scottboms/kirbytag-kbd'
   ],
-  version: '1.0.1',
+  version: '1.0.2',
   extends: [
     'tags' => [
       'kbd' => [
