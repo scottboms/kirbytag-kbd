@@ -1,6 +1,6 @@
 # kbd Kirbytag
 
-A kirbytag for generating <kbd> HTML elements in textarea fields.
+Insert `<kbd>` HTML elements in Textarea and Writer fields.
 
 ## Installation
 
@@ -10,22 +10,48 @@ Download and copy this repository to `/site/plugins/kirbytag-kbd`.
 
 ### Git submodule
 
-	git submodule add https://github.com/scottboms/kirbytag-kbd.git site/plugins/kirbytag-kbd
+`git submodule add https://github.com/scottboms/kirbytag-kbd.git site/plugins/kirbytag-kbd`
+
+## Blueprint Configuration
+
+To enable the Textarea or Writer Mark in your blueprints, add the appropriate button or mark name to the list in your blueprints. For example, for `textarea` fields:
+
+    fields:
+      text:
+        label: Text
+        type: textarea
+        buttons:
+          - bold
+          - italic
+          - kbd
+
+For a Writer Field type, use the follow to enable the Mark:
+
+    fields:
+      writer:
+        label: Writer Field
+        type: writer
+        marks:
+          - bold
+          - italic
+          - kbd
 
 ## Usage
 
-`(kbd: Ctrl)`
+Textarea Field:
 
-### Optional Tag Attributes
+    (kbd: Ctrl)
 
-* `class`: A CSS class/classes to append to the wrapper element [optional]
+### Optional Class Attribute for the Textarea Button
+
+    class: A CSS class/classes to append to the wrapper element
 
 Example usage: `(kbd: Ctrl class: key)` 
 
 ## Compatibility
 
-* Kirby 3.5+
-* Kirby 4+
+* Kirby 4.x
+* Kirby 5
 
 ## Disclaimer
 

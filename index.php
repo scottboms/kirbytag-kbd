@@ -10,6 +10,9 @@
  * @license MIT
 **/
 
+use Kirby\Sane\Html;
+Kirby\Sane\Html::$allowedTags['kbd'] = ['class'];
+
 use Composer\Semver\Semver;
 use Kirby\Cms\App as Kirby;
 
@@ -23,7 +26,7 @@ Kirby::plugin(
   info: [
     'homepage' => 'https://github.com/scottboms/kirbytag-kbd'
   ],
-  version: '1.0.2',
+  version: '1.1.0',
   extends: [
     'tags' => [
       'kbd' => [
