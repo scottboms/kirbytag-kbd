@@ -14,11 +14,14 @@ use Kirby\Sane\Html;
 Kirby\Sane\Html::$allowedTags['kbd'] = ['class'];
 
 use Composer\Semver\Semver;
-use Kirby\Cms\App as Kirby;
+use Kirby\Cms\App;
 
-// validate Kirby version
-if (Semver::satisfies(Kirby::version() ?? '0.0.0', '~4.0 || ~5.0') === false) {
-	throw new Exception('HTML5 Video Tag requires Kirby 4 or 5');
+// shamelessly borrowed from distantnative/retour-for-kirby
+if (
+	version_compare(App::version() ?? '0.0.0', '4.0.1', '<') === true ||
+	version_compare(App::version() ?? '0.0.0', '6.0.0', '>=') === true
+) {
+	throw new Exception('kbd Kirbytag requires Kirby v4 or v5');
 }
 
 Kirby::plugin(
@@ -26,7 +29,7 @@ Kirby::plugin(
   info: [
     'homepage' => 'https://github.com/scottboms/kirbytag-kbd'
   ],
-  version: '1.1.0',
+  version: '1.1.1',
   extends: [
     'tags' => [
       'kbd' => [
