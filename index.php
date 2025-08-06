@@ -28,7 +28,7 @@ Kirby::plugin(
     'homepage' => 'https://github.com/scottboms/kirbytag-kbd',
     'license'  => 'MIT'
   ],
-  version: '1.1.1',
+  version: '1.1.2',
   extends: [
     'tags' => [
       'kbd' => [
