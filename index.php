@@ -10,11 +10,9 @@
  * @license MIT
 **/
 
+use Kirby\Cms\App;
 use Kirby\Sane\Html;
 Kirby\Sane\Html::$allowedTags['kbd'] = ['class'];
-
-use Composer\Semver\Semver;
-use Kirby\Cms\App;
 
 // shamelessly borrowed from distantnative/retour-for-kirby
 if (
@@ -25,9 +23,10 @@ if (
 }
 
 Kirby::plugin(
-  name: 'scottboms/kirbytag-kbd', 
+  name: 'scottboms/kirbytag-kbd',
   info: [
-    'homepage' => 'https://github.com/scottboms/kirbytag-kbd'
+    'homepage' => 'https://github.com/scottboms/kirbytag-kbd',
+    'license'  => 'MIT'
   ],
   version: '1.1.1',
   extends: [
