@@ -20,26 +20,26 @@ To enable the Textarea or Writer Mark in your blueprints, add the appropriate bu
 
 ```yml
 fields:
-	text:
-		label: Text
-		type: textarea
-		buttons:
-			- bold
-			- italic
-			- kbd
+  text:
+    label: Text
+    type: textarea
+    buttons:
+      - bold
+      - italic
+      - kbd
 ```
 
 For a Writer Field type, use the follow to enable the Mark:
 
 ```yml
 fields:
-	writer:
-		label: Writer Field
-		type: writer
-		marks:
-			- bold
-			- italic
-			- kbd
+  writer:
+    label: Writer Field
+    type: writer
+    marks:
+      - bold
+      - italic
+      - kbd
 ```
 
 ## Usage
