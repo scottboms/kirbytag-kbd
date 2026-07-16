@@ -2,7 +2,15 @@
   "name": "kbd",
   "description": "Custom Kirbytag and Writer Field plugin to generate <kdb> elements",
   "author": "Scott Boms <plugins@scottboms.com>",
-  "version": "1.1.2",
+  "version": "6.0.0",
   "type": "kirby-plugin",
-  "license": "MIT"
+  "license": "MIT",
+
+  "scripts": {
+    "dev": "kirbyup serve src/index.js",
+    "build": "kirbyup src/index.js"
+  },
+  "devDependencies": {
+    "kirbyup": "4.0.0-alpha.5"
+  }
 }
