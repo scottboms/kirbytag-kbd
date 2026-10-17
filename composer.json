@@ -11,8 +11,14 @@
     }
   ],
   "require": {
-    "php": ">8.1.0 <8.4.0",
+    "php": ">=8.3.0 <8.6.0",
     "getkirby/cms": "^6.0",
     "getkirby/composer-installer": "^1.1"
+  },
+  {
+    "scripts": {
+      "dev": "kirbyup dev src/index.js",
+      "build": "kirbyup src/index.js"
+    }
   }
 }

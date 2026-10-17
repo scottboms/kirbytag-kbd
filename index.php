@@ -14,21 +14,22 @@ use Kirby\Cms\App;
 use Kirby\Sane\Html;
 Kirby\Sane\Html::$allowedTags['kbd'] = ['class'];
 
-// shamelessly borrowed from distantnative/retour-for-kirby
+$version = App::version() ?? '0.0.0';
 if (
-	version_compare(App::version() ?? '0.0.0', '6.0.0', '<') === true ||
-	version_compare(App::version() ?? '0.0.0', '7.0.0', '>=') === true
+    version_compare($version, '6.0.0-beta.1', '<') ||
+    version_compare($version, '7.0.0', '>=')
 ) {
-	throw new Exception('kbd Kirbytag requires Kirby v6');
+    throw new Exception('Webfinger requires Kirby 6');
 }
 
-Kirby::plugin(
-  name: 'scottboms/kirbytag-kbd',
+Kirby::plugin('scottboms/kirbytag-kbd',
   info: [
     'homepage' => 'https://github.com/scottboms/kirbytag-kbd',
-    'license'  => 'MIT'
+    'version'  => '6.0.0',
+    'license'  => 'MIT',
+    'authors'  => [[ 'name' => 'Scott Boms' ]],
   ],
-  version: '6.0.0',
+
   extends: [
     'tags' => [
       'kbd' => [

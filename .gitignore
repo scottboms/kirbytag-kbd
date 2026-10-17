@@ -4,6 +4,7 @@
 Icon
 node_modules
 index.dev.mjs
+index.dev.js
 
 # Lock Files
 # ---------------------
