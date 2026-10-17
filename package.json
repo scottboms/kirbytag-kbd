@@ -4,5 +4,12 @@
   "author": "Scott Boms <plugins@scottboms.com>",
   "version": "6.0.0",
   "type": "kirby-plugin",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "kirbyup dev src/index.js",
+    "build": "kirbyup src/index.js"
+  },
+	"devDependencies": {
+		"kirbyup": "^4.0.0"
+	}
 }
