@@ -16,10 +16,10 @@ Kirby\Sane\Html::$allowedTags['kbd'] = ['class'];
 
 // shamelessly borrowed from distantnative/retour-for-kirby
 if (
-	version_compare(App::version() ?? '0.0.0', '4.0.1', '<') === true ||
-	version_compare(App::version() ?? '0.0.0', '6.0.0', '>=') === true
+	version_compare(App::version() ?? '0.0.0', '6.0.0', '<') === true ||
+	version_compare(App::version() ?? '0.0.0', '7.0.0', '>=') === true
 ) {
-	throw new Exception('kbd Kirbytag requires Kirby v4 or v5');
+	throw new Exception('kbd Kirbytag requires Kirby v6');
 }
 
 Kirby::plugin(
@@ -28,7 +28,7 @@ Kirby::plugin(
     'homepage' => 'https://github.com/scottboms/kirbytag-kbd',
     'license'  => 'MIT'
   ],
-  version: '1.1.2',
+  version: '6.0.0',
   extends: [
     'tags' => [
       'kbd' => [

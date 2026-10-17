@@ -56,12 +56,11 @@ Textarea Field:
 class: A CSS class/classes to append to the wrapper element
 ```
 
-Example usage: `(kbd: Ctrl class: key)` 
+Example usage: `(kbd: Ctrl class: key)`
 
 ## Compatibility
 
-* Kirby 4.x
-* Kirby 5.x
+* Kirby 6.x
 
 ## Disclaimer
 
