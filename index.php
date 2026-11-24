@@ -16,7 +16,7 @@ Kirby\Sane\Html::$allowedTags['kbd'] = ['class'];
 
 $version = App::version() ?? '0.0.0';
 if (
-    version_compare($version, '6.0.0-beta.1', '<') ||
+    version_compare($version, '6.0.0', '<') ||
     version_compare($version, '7.0.0', '>=')
 ) {
     throw new Exception('Webfinger requires Kirby 6');
